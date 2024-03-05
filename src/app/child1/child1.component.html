@@ -1,0 +1,8 @@
+<p>child1 works!</p>
+<h2>Scegli il valore di test</h2>
+<input type="radio" name="valore" (click)="setTest(true)">Vero
+<input type="radio" name="valore" (click)="setTest(false)">Falso
+<p>test dalla proprietà: {{test}}</p>
+<p>test dal metodo: {{getTest()}}</p>
+<p *ngIf="test; else bloccoElse">Paragrafo visibile quando test è vero</p>
+<ng-template #bloccoElse>Questo paragrafo, invece è visibile quando test è falso</ng-template>

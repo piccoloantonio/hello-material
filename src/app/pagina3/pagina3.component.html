@@ -1,0 +1,23 @@
+<p>pagina3 works!</p>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput name="nome" ngModel>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Cognome</mat-label>
+        <input matInput name="cognome" ngModel>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Sesso</mat-label>
+        <mat-select name="sesso" ngModel>
+            <mat-option value="M">Maschio</mat-option>
+            <mat-option value="F">Femmina</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Invia</button>
+</form>
+<div #risultato>
+    <h2>Hai inviato i seguenti valori:</h2>
+    {{nome}}, {{cognome}}, {{sesso}}
+</div>
